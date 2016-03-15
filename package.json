@@ -1,11 +1,11 @@
 {
-  "name": "blender-today-theme",
+  "name": "blender-network-theme",
   "version": "1.0.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/armadillica/dillo-theme-blender-today.git"
+    "url": "https://github.com/armadillica/dillo-theme-blender-network.git"
   },
-  "author": "Blender.Today",
+  "author": "Blender Network Forums",
   "license": "GPL",
   "devDependencies": {
     "gulp": "~3.9.0",
