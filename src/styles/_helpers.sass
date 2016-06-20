@@ -1,0 +1,36 @@
+/* Mobile Stuff */
+$screen-xs: 480px !default
+$screen-xs-min: $screen-xs
+$screen-phone: $screen-xs-min
+$screen-sm: 768px !default
+$screen-sm-min: $screen-sm
+$screen-tablet: $screen-sm-min
+$screen-md: 992px !default
+$screen-md-min: $screen-md
+$screen-desktop: $screen-md-min
+$screen-lg: 1200px !default
+$screen-lg-min: $screen-lg
+$screen-lg-desktop: $screen-lg-min
+$screen-xs-max: $screen-sm-min - 1
+$screen-sm-max: $screen-md-min - 1
+$screen-md-max: $screen-lg-min - 1
+
+=media-xs
+	@media (max-width: #{$screen-tablet - 1px})
+		@content
+
+=media-sm
+	@media (min-width: #{$screen-tablet}) and (max-width: #{$screen-desktop - 1px})
+		@content
+
+=media-md
+	@media (min-width: #{$screen-desktop})
+		@content
+
+=media-lg
+	@media (min-width: #{$screen-lg-desktop})
+		@content
+
+=media-print
+	@media print
+		@content

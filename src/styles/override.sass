@@ -1,13 +1,124 @@
+@import _helpers
 
 $color_brand_main: #d91b5c
 $color_brand_secondary: #109df0
+$color-background: #EaEbEf
+$color-text: #4d4e53
 
-/* Here be overrides! */
+$font_body: 'Roboto', 'Lucida Sans', 'Lucida Grande', sans-serif
+$font_headings: 'Roboto', 'Lucida Sans', 'Lucida Grande', sans-serif
+
+body
+	font-family: $font_body
+	color: $color-text
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font_headings
+
 a
 	color: $color_brand_main
 	&:hover
 		color: $color_brand_secondary
 
+.post-index-item
+	margin: 0
+	border:
+		top: none
+		left: none
+		right: none
+		radius: 0
+
+.row.post-view-details-container
+	display: flex
+	align-items: center
+	padding: 10px 0
+
+	.post-view-details-avatar img
+		max-width: 50px
+		padding: 2px
+		margin-left: 5px
+	.post-view-details-meta
+		margin-left: 15px
+		.post-actions
+			top: 25px
+
+			.post-actions-button
+				transform: scale(.8)
+
+
+
+.post-view-details
+	background-color: darken($color-background, 30%)
+	border: none
+	color: $color-text
+
+
+$post-index-item-type-size: 60px
+.post-index-item-type
+	width: $post-index-item-type-size
+	height: $post-index-item-type-size
+	box-shadow: none
+
+.post-index-item-title,
+.post-index-item-details
+	+media-sm
+		padding-left: 135px
+	+media-md
+		padding-left: 135px
+	+media-lg
+		padding-left: 140px
+
+.post-index-item-title
+	font-size: 1.3em
+	+media-sm
+		font-size: 1.2em
+	+media-md
+		font-size: 1.3em
+
 .post-index-item-title,
 .post-index-item-title:visited
 	color: $color_brand_main
+
+.nav-sidebar.navigation nav ul li.navbar-submit
+	background-color: $color_brand_main
+
+.post-view-comments
+	& .comments-title
+		font-family: $font_headings
+		& small
+			font-family: $font_body
+
+.popover, .badge
+	font-family: $font_body
+
+.nav-sidebar.branding,
+.user-login-branding,
+.user-register-branding,
+	& h3
+		font-family: $font_headings
+
+.nav-sidebar.navigation
+	ul li.navbar-login
+		font-family: $font_headings
+
+.navbar-submit,
+.post-index-item-title,
+.post-view-title,
+.notification-post-edit,
+.notification-post-saved,
+.notification-post-fail,
+.post-submit-field-submit,
+.nav-tabs li a, .nav-tabs li.active a,
+.nav-tabs li a:hover, .nav-tabs li.active a:hover,
+.nav-tabs li a:focus, .nav-tabs li.active a:focus,
+.nav-tabs li a:active, .nav-tabs li.active a:active,
+.cd-dropdown>span
+	font-family: $font_headings
+
+.post-view-comments
+	& .comments-title
+		font-family: $font_headings
+
+.post-submit-field-type
+	& .post-submit-field-type-button-title
+		font-family: $font_headings
