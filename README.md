@@ -1,2 +1,2 @@
 # dillo-theme-blender-network
-Dillo theme for Blender Network Forums
+dillo.space theme for Blender Network Community Forums

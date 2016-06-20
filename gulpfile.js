@@ -7,6 +7,7 @@ var gulp          = require('gulp'),
     jade          = require('gulp-jade'),
     uglify        = require('gulp-uglify'),
     concat        = require('gulp-concat'),
+    rename        = require('gulp-rename'),
     livereload    = require('gulp-livereload');
 
 
@@ -54,6 +55,19 @@ gulp.task('templates', function() {
 
 /* Scripts */
 gulp.task('scripts', function() {
+    gulp.src('src/scripts/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(uglify())
+        .pipe(rename(function(path){
+            path.extname = '.min.js'
+        }))
+        .pipe(sourcemaps.write("./"))
+        .pipe(gulp.dest(theme_folder + '/static/js'))
+        .pipe(livereload());
+});
+
+/* Scripts Concatenated */
+gulp.task('scripts-tutti', function() {
     gulp.src('src/scripts/uglify/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(concat("tutti.min.js"))
@@ -73,5 +87,5 @@ gulp.task('watch',function() {
 });
 
 // Run 'gulp' to build everything at once
-gulp.task('default', ['styles', 'templates', 'scripts']);
+gulp.task('default', ['styles', 'templates', 'scripts', 'scripts-tutti']);
 
