@@ -83,7 +83,13 @@ $post-index-item-type-size: 60px
 	background-color: $color_brand_main
 
 .post-view-comments
-	& .comments-title
+	.post-view-comments-item.odd
+		background-color: lighten($color-background, 7%)
+	.post-view-comments-item-text
+		font-size: 1.1em
+	.post-view-comments-item-header
+		font-size: .9em
+	.comments-title
 		font-family: $font_headings
 		& small
 			font-family: $font_body
